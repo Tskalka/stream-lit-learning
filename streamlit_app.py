@@ -19,7 +19,7 @@ normalized_shoe_size = st.number_input("Shoe size US shoe", min_value=1.0, max_v
 if st.button("Predict"):
     input_data = pd.DataFrame({
         "height": [height],
-        "shoe_size": [normalized_shoe_size]
+        "normalized_shoe_size": [normalized_shoe_size]
     })
     prediction = model.predict(input_data)[0]
     probability = model.predict_proba(input_data)[0]
